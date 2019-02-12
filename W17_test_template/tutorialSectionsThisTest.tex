@@ -1,0 +1,29 @@
+\newcounter{tutorialcounter}
+\newcounter{tutorialleaders}
+
+\newcommand\addTutorialLabel[1]{%
+   \stepcounter{tutorialcounter}
+   \expandafter\def\csname tutoriallist\thetutorialcounter\endcsname{#1}
+}
+
+\newcommand\addTutorialLeaders[1]{%
+   \stepcounter{tutorialleaders}
+   \expandafter\def\csname tutorialleaderslist\thetutorialleaders\endcsname{#1}
+}
+
+\newcommand\getTutorialLabel[1]{%
+   \csname tutoriallist#1\endcsname
+}
+
+\newcommand\getTutorialLeaders[1]{%
+   \csname tutorialleaderslist#1\endcsname
+}
+
+
+% Tutorial test number and chapters/topics covered
+\newcommand{\testNumber} {1}
+
+
+%dateSection
+
+

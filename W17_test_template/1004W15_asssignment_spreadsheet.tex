@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{xy}
+\usepackage{color}
+\usepackage{etoolbox}
+\usepackage{mdframed}
+\usepackage{multicol}
+\usepackage{forloop}
+\usepackage{multirow}
+\usepackage{booktabs} 
+\setlength{\textwidth}{18cm} \setlength{\textheight}{24.5cm} % was 26.6
+\setlength{\headsep}{0cm} \setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm} \setlength{\parskip}{5pt}
+\setlength{\parindent}{0cm} \setlength{\baselineskip}{10pt}
+
+%essential graphics packages
+\usepackage{graphics,graphicx}
+\usepackage{epsf,caption2,subfigure}
+
+% Additional settings for margins
+\addtolength{\hoffset}{-1cm} % left margin
+\addtolength{\voffset}{-2cm} % top margin
+
+% Boolean for whether or not to include checkboxes beside problem names (here it should be true for the spreadsheet)
+\newif\ifIncludeCheckboxes
+\IncludeCheckboxestrue
+%------------------------
+% begin document
+%------------------------
+\begin{document}
+
+\input{../TutorialTemplates/newcommands}
+\input{tutorialSectionsThisTest}
+\pagenumbering{gobble}
+
+%------------------------------------------
+
+\begin{minipage}[t]{\textwidth}
+
+\centerline{\textbf{\huge \textbf{Physics 1004 / BIT 1204}: Tutorial Test \testNumber}}
+\vspace{0.1cm}
+\centerline{\textbf{\large \testChapters}}
+\vspace{0.2cm}
+\centerline{\textbf{Assignment of Problems to Sections}}
+\vspace{0.5cm}
+
+
+\vspace{1.5cm}
+\begin{multicols}{2}
+\begin{mdframed}
+\input{tutorialAssignedProblems} \\ \\
+\end{mdframed}
+\columnbreak
+
+% 2nd column
+\begin{mdframed}
+\centerline{\textbf{Multiple Choice}}
+
+\vspace{0.5cm}
+ 
+\begin{multicols}{2}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item{1.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{2.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{3.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{4.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{5.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{6.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{7.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{8.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{9.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{10.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{11.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{12.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{13.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{14.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{15.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+\end{itemize}
+\columnbreak
+
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item{16.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{17.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{18.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{19.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{20.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{21.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{22.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{23.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{24.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{25.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{26.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{27.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{28.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{29.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+	\item{30.(a) $\Box$ \hspace{0.2cm} (b) $\Box$}
+\end{itemize}
+\vspace{0.5cm}
+
+\columnbreak
+\end{multicols}
+\end{mdframed}
+
+\columnbreak
+\end{multicols}
+
+\vspace{1.0cm}
+
+\begin{mdframed}
+\textbf{Problems to be Taken Up on Blackboard}
+
+\begin{multicols}{3}
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item{Problem 1 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 2 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 3 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 4 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 5 $\Box$ \hspace{0.2cm} $\Box$}
+\end{itemize}
+\columnbreak
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item{Problem 6 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 7 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 8 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 9 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 10 $\Box$ \hspace{0.2cm} $\Box$}
+\end{itemize}
+\columnbreak
+\begin{itemize}
+	\setlength\itemsep{0em}	
+	\item{Problem 11 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 12 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 13 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 14 $\Box$ \hspace{0.2cm} $\Box$}
+	\item{Problem 15 $\Box$ \hspace{0.2cm} $\Box$}
+\end{itemize}
+\columnbreak
+\end{multicols}
+
+%\vspace{2.5cm}
+\end{mdframed}
+\clearpage
+\end{minipage}
+
+\clearpage
+
+\begin{table}[htdp]
+%\caption{}
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\toprule
+Tutorial Section & MC\# 1 & MC\# 2 & Long Problem & Blackboard \\ 
+\hline \hline
+\newcounter{forloopcounter}
+% For loop over the 15 different tutorial sections
+\forloop{forloopcounter}{1}{\value{forloopcounter} < 15}{
+\getTutorialLabel{\arabic{forloopcounter}} & & & & \\ \hline
+} % end of for loop
+\getTutorialLabel{15} & & & & \\
+\bottomrule
+%\multicolumn{5}{|c|}{Number of Entries} \\ 
+%\multicolumn{5}{c}{Test}
+%\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}
+
+
+
+\end{document}

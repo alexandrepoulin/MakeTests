@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{array}
+\usepackage{xy}
+\usepackage{color}
+\usepackage{etoolbox}
+\usepackage{mdframed}
+\usepackage{multicol}
+\usepackage{forloop}
+\setlength{\textwidth}{18cm} \setlength{\textheight}{24.5cm} % was 26.6
+\setlength{\headsep}{0cm} \setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm} \setlength{\parskip}{5pt}
+\setlength{\parindent}{0cm} \setlength{\baselineskip}{10pt}
+
+%essential graphics packages
+\usepackage{graphics,graphicx}
+\usepackage{epsf,caption2,subfigure}
+
+% Additional settings for margins
+\addtolength{\hoffset}{-1cm} % left margin
+\addtolength{\voffset}{-2cm} % top margin
+
+% Boolean for whether or not to include checkboxes beside problem names (here it should be false for the cover sheet)
+\newif\ifIncludeCheckboxes
+\IncludeCheckboxesfalse
+
+%------------------------
+% begin document
+%------------------------
+\begin{document}
+
+\input{../TutorialTemplates/newcommands}
+\input{tutorialSectionsThisTest}
+\pagenumbering{gobble}
+
+\newcounter{forloopcounter}
+
+%------------------------------------------
+
+% For loop over the 15 different tutorial sections
+\forloop{forloopcounter}{1}{\value{forloopcounter} < 16}{
+
+\begin{minipage}[t]{\textwidth}
+
+\centerline{\textbf{\huge \textbf{Physics 1004 / BIT 1204}: Tutorial Test \testNumber}}
+\vspace{0.1cm}
+\centerline{\textbf{\large \testChapters}}
+\vspace{0.5cm}
+
+\centerline{\textbf{\large Tutorial Section}: \getTutorialLabel{\arabic{forloopcounter}}}
+\centerline{\textbf{\large Tutorial Leaders}: \getTutorialLeaders{\arabic{forloopcounter}}}
+
+\vspace{1.5cm}
+\begin{multicols}{2}
+\begin{mdframed}
+\input{tutorialAssignedProblems} \\ \\
+\end{mdframed}
+\columnbreak
+\input{tutorialWhatsIncluded} \\ \\
+\columnbreak
+\end{multicols}
+
+\vspace{1.0cm}
+
+\begin{mdframed}
+Additional Comments:
+\begin{itemize}
+	\item {In addition to the sample problems taken up on the blackboard, feel free to address additional difficulties that come up in your section}
+	\item {There are marks assigned to the problems to be taken up on the blackboard -- obviously ignore these (leftover from another year)}
+\end{itemize}
+\vspace{1.0cm}
+\end{mdframed}
+\clearpage
+\end{minipage}
+} % end of for loop
+
+
+\end{document}
